@@ -3,12 +3,27 @@ import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Profiles from './components/Profiles'
-//import Skill-list from './components/Skill-list'
+//import Skills from './components/Skills'
 
 
 class App extends Component {
-  state = {
-    listings: []
+  constructor(props){
+    super(props)
+    this.state = {
+      listings:[],
+    }
+  }
+  componentDidMount(){
+    fetch("./dinosaurs.json")
+      .then(response => response.json())
+      .then(listings => {
+        return this.setState({
+        listings: listings
+           
+        })
+         
+      })
+     
   }
   render() {
     return (

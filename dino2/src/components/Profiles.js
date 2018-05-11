@@ -10,8 +10,8 @@ class Profiles extends React.Component {
             return (
               <li key={listing.title}>
                 <div className="profile-card">
-                  <header class="profile-header">
-                    <img src={listing.image} alt="listingimg"/>
+                  <header className="profile-header">
+                    <img src={listing.image} alt="listings"/>
                     <h2>{listing.name}</h2>
                   </header>
                 </div>
