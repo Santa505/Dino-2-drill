@@ -1,6 +1,12 @@
 import React from "react";
 
 class Profiles extends React.Component {
+    
+
+
+
+
+
   render() {
     return (
       <section id="profiles-container">

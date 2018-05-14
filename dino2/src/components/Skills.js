@@ -1,11 +1,16 @@
 import React from "react"
 
 class Skills extends React.Component {
+    
+
+
+
+
     render(){
         return(
             <section class="skills-container hidden">
-        <h4>Skills</h4>
-        <ul className="skills-list"> onClick = {}
+            <h4>Skills</h4>
+            <ul className="skills-list"> 
           {each.this.skills}}
             <li>{this}</li>
           {each}
