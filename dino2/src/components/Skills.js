@@ -11,7 +11,7 @@ class Skills extends React.Component {
             <section class="skills-container hidden">
             <h4>Skills</h4>
             <ul className="skills-list"> 
-          {each.this.skills}}
+            {each.this.skills}
             <li>{this}</li>
           {each}
        
