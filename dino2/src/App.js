@@ -1,29 +1,25 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Profiles from './components/Profiles'
-//import Skills from './components/Skills'
-
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Profiles from "./components/Profiles";
+import Skills from "./components/Skills";
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       listings:[],
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     fetch("./dinosaurs.json")
       .then(response => response.json())
       .then(listings => {
         return this.setState({
-        listings: listings
-           
-        })
-         
+          listings: listings
       })
-     
+    })
   }
   render() {
     return (
@@ -32,7 +28,6 @@ class App extends Component {
         <Header />
         <Profiles listings={this.state.listings} />
         <Footer />
-
       </div>
     );
   }

@@ -1,26 +1,24 @@
 import React from "react"
-
-class Skills extends React.Component {
-    
+class Skills extends React.Component{
 
 
 
-
-    render(){
-        return(
-            <section class="skills-container hidden">
-            <h4>Skills</h4>
-            <ul className="skills-list"> 
-            {each.this.skills}
-            <li>{this}</li>
-          {each}
-       
-        )
-        </ul>
+  render() {
+    var skillClasses = "skills-container"
+    // if (this.state.skills === true) {
+    //   skillClasses = "skills-container"
+    // }
+      return (
+        <section className={skillClasses}>
+          <h4>Skills</h4>
+          <ul key="Skills">
+            {this.props.skills.map(skill => <li key={skill}>{skill}</li>)}
+          </ul>
         </section>
 
+      )
+  }
 
+}
 
-    )
-}
-}
+export default Skills
